@@ -24,18 +24,19 @@ scissors = '''
       (____)
 ---.__(___)
 '''
+
 import random
 
 img = [rock, paper, scissors]
 user_choice = int(input("enter 0 for rock, 1 for paper and 2 for sissaors : "))
-print(img[user_choice])
-
-computer_choice = random.randint(0,2)
-print(f"computer_choice :{computer_choice}"+img[computer_choice])
-
 if(user_choice > 2 or user_choice < 0):
   print("Invalid Input")
 else:
+  print(img[user_choice])
+  
+  computer_choice = random.randint(0,2)
+  print(f"computer_choice :{computer_choice}"+img[computer_choice])
+
   if(computer_choice == user_choice):
     print("Draw")
   elif(user_choice == 0 and computer_choice == 2):
@@ -46,3 +47,5 @@ else:
     print("You win!!!")
   elif(user_choice < computer_choice):
     print("You lose")
+    
+      
